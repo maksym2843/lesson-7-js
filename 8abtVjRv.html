@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function Client(id, name, surname , email, phone, order){
+    this.id = id;
+    this.name = name;
+    this.surname = surname;
+    this.email = email;
+    this.phone = phone;
+    this.order = order;
+  }
+  let array = [
+    new Client(1, 'Kolya', 'Kovalchuk', 'Kovalchuk@gmail.com', '+380546487', 'goods'),
+    new Client(2, 'Maksym', 'Prykhodko', 'max@gmail.com', '+3805976487', 'goods'),
+    new Client(3, 'Nastya', 'Petrenko', 'nast@ukt.net', '+3809972049', 'goods'),
+    new Client(4, 'Valera', 'Sydorchyk', 'sidr@gmail.com', '+38018972489', 'goods'),
+    new Client(5, 'Vasya', 'Sereda', 'sereda@gmail.com', '+3805976487', 'goods'),
+    new Client(6, 'Mary', 'Pynkovska', 'mary@ukt.net', '+45640984645', 'goods'),
+    new Client(7, 'Steve', 'Jobs', 'st@ukt.net', '+165840984645', 'goods'),
+    new Client(8, 'Oleksandr', 'Shevchenko', 'oleks@ukt.net', '+4545645666', 'goods'),
+    new Client(9, 'Diana', 'Gavryliuk', 'DG@ukt.net', '+188468797687', 'goods'),
+    new Client(10, 'Peter', 'Papach', 'hero@ukt.net', '+15646867464', 'goods')
+  ]
+  let sort = array.sort((a, b) => a.order.length - b.order.length);
+</script>
+</body>
+</html>

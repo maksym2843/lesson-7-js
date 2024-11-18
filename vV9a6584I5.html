@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Car(model, manufacturer, year, topspeed, enginevolume){
+        this.model = model;
+        this.manufacturer = manufacturer;
+        this.year = year;
+        this.topspeed = topspeed;
+        this.enginevolume = enginevolume;
+        this.drive = function (){
+            console.log(`їдемо зі швидкістю ${this.topspeed} на годину`);
+        };
+        this.info = function (){
+            for (const key in this){
+                console.log(key, this[key]);
+            }
+        };
+        this.increaseMaxSpeed = function (NewSpeed){
+            if (NewSpeed > 0) this.topspeed = NewSpeed + topspeed;
+
+        };
+        this.Changeyear = function (newValue){
+            if (newValue > 1900) this.Changeyear = newValue;
+        }
+        this.addDriver = function (drivers){
+            if (drivers) this.driver = drivers;
+        }
+    }
+    let car = new Car('911', 'Porsche', '2015', 320, 5);
+    console.log(car);
+    car.drive();
+    car.info();
+    car.increaseMaxSpeed(400);
+    car.Changeyear(2018);
+    car.addDriver('Maksym');
+</script>
+</body>
+</html>
